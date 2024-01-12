@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+<html>
+<body>
+{%block centercontent %}
+<h2>Add Contact</h2>
+<hr>
+<form method="POST">  
+        {% csrf_token %}  
+        {{ frm.as_div }}  
+        <button type="submit" >Save</button>  
+    </form>
+<hr>
+{% if newcontact %}
+<h2>Added Successfully</h2>
+{% endif %}
+
+<p>Back to <a href="/ContactBookApp/">Home</a></p>
+{% endblock %}
+
+</body>
+</html>

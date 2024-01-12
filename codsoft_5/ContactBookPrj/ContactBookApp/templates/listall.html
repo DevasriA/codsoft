@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+<html>
+<body>
+{%block centercontent %}
+<h2>Contact List</h2>
+<hr>
+
+<table border="0">
+{% for s in contacts %}
+  <tr>
+  <td>{{ s.id }}</td>
+  <td><a href="details/{{ s.id }}">{{ s.name }}</a></td>
+  <td><a href="details/{{ s.id }}">{{ s.phonenumber }}</a></td>
+  <td><a href="deletect/{{ s.id }}">Delete</a></td>
+  <td><a href="updatect/{{ s.id }}">Modify</a></td>
+  </tr>
+{% endfor %}
+</table>
+<hr>
+<p>Back to <a href="/ContactBookApp/">Home</a></p>
+{% endblock %}
+</body>
+</html>

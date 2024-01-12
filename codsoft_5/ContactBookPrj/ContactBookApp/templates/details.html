@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+<html>
+<body>
+{%block centercontent %}
+<h3>{{ mymember.name }} </h3>
+  
+<p>Phone: {{ mymember.phonenumber }}</p>
+<p>Email: {{ mymember.mail }}</p>
+<p>Member Address: {{ mymember.address }}</p>
+<hr>
+<p>Back to <a href="/ContactBookApp/">Home</a></p>
+
+{% endblock %}
+</body>
+</html>

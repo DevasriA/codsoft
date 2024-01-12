@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+<html>
+<body>
+{% block centercontent %}
+<h2>Modify Contact</h2>
+<hr>
+
+<form method="POST" >  
+    {% csrf_token %}  
+    {{ frm.as_p }}  
+    <button type="submit">Save</button>  
+</form>
+
+{% if contact_updated %}
+    <h2>Contact Updated Successfully</h2>
+{% endif %}
+
+<hr>
+
+<p>Back to <a href="/ContactBookApp/">Home</a></p>
+{% endblock %}
+</body>
+</html>
